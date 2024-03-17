@@ -68,7 +68,7 @@ const HelpemAll = () => {
         <section className='helpem'>
             <div className="helpem__main">
               <div className="helpem__content">
-                <h2>Every company is a tech company. <span>We’re here to help ‘em all.</span></h2>
+                <h2>Every company is a tech company.<br /> <span>We’re here to help ‘em all.</span></h2>
                 <p>More than 3,000 tech teams, representing all industries and from countries around the world, trust HackerRank to connect with developers and add cutting-edge skills to their teams.</p>
                 <p>That includes 25% of the Fortune 100 — and that moonshot startup that just came out of stealth.</p>
               </div>

@@ -81,9 +81,46 @@
 
  .helpem__partners{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   img{
     height: 60px;
   }
  }
+
+
+
+
+
+
+
+
+
+
+//  HelpemAll Media Started
+
+
+
+
+@media screen and (max-width:1024px){
+  .helpem__main{
+    flex-direction: column;
+  }
+
+  .helpem__content{
+    max-width: 1180px;
+    h2{
+      font-size: 24px;
+    }
+  }
+
+
+  .helpem__swiper{
+    max-width: 1180px;
+    margin: 36px 0;
+  }
+}
+
+
+

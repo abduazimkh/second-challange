@@ -1,10 +1,19 @@
 import "./HelpemAll.scss"
-import img1 from "../../assets/images/swiperimg1.png"
-import img2 from "../../assets/images/swiperimg2.png"
-import img3 from "../../assets/images/swiperimg3.png"
-import img4 from "../../assets/images/swiperimg4.png"
-import img5 from "../../assets/images/swiperimg5.png"
-import img6 from "../../assets/images/swiperimg6.png"
+import img1 from "../../assets/images/ubs_black.png"
+import img2 from "../../assets/images/vmware_black.png"
+import img3 from "../../assets/images/booking-com_black.png"
+import img4 from "../../assets/images/doordash_black.png"
+import img5 from "../../assets/images/vanguard_black.png"
+import img6 from "../../assets/images/wish_black.png"
+
+import prt1 from "../../assets/images/peloton_black.png"
+import prt2 from "../../assets/images/atlassian_black.png"
+import prt3 from "../../assets/images/bloomberg_black.png"
+import prt4 from "../../assets/images/vmware_black.png"
+import prt5 from "../../assets/images/stripe_black.png"
+import prt6 from "../../assets/images/goldman-sachs_black.png"
+import prt7 from "../../assets/images/adobe_black.png"
+import prt8 from "../../assets/images/linkedin_black.png"
 
 
 
@@ -19,6 +28,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
+import { Container } from "../../styled-components/StyledComponent"
 
 
 
@@ -50,43 +60,53 @@ const HelpemAll = () => {
     }
   ]
 
+  const partners = [prt1,prt2,prt3,prt4,prt5,prt6,prt7,prt8]
+
 
   return (
-    <section className='helpem'>
-      <div>
-        <div className="helpem__content">
-          <h2>Every company is a tech company. <span>We’re here to help ‘em all.</span></h2>
-          <p>More than 3,000 tech teams, representing all industries and from countries around the world, trust HackerRank to connect with developers and add cutting-edge skills to their teams.</p>
-          <p>That includes 25% of the Fortune 100 — and that moonshot startup that just came out of stealth.</p>
-        </div>
-        <div className="helpem__swiper">
-          <Swiper 
-          modules={[Pagination, Autoplay]} 
-          className="mySwiper"
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}>
-            {
-              datas.map((e,i)=>
-                <SwiperSlide key={i}>
-                  <div className="swiper__content">
-                    <img src={e.title} alt="" style={{width:"90px"}}/>
-                    <p>{e.description}</p>
-                  </div>
-                </SwiperSlide>
-              )
-            }          
-          </Swiper>
-        </div>
-      </div>
-      <div className="helpem__partners">
+      <Container>
+        <section className='helpem'>
+            <div className="helpem__main">
+              <div className="helpem__content">
+                <h2>Every company is a tech company. <span>We’re here to help ‘em all.</span></h2>
+                <p>More than 3,000 tech teams, representing all industries and from countries around the world, trust HackerRank to connect with developers and add cutting-edge skills to their teams.</p>
+                <p>That includes 25% of the Fortune 100 — and that moonshot startup that just came out of stealth.</p>
+              </div>
 
-      </div>
-    </section>
+              <div className="helpem__swiper">
+                <Swiper 
+                modules={[Pagination, Autoplay]} 
+                className="mySwiper"
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                }}>
+                  {
+                    datas.map((e,i)=>
+                      <SwiperSlide key={i}>
+                        <div className="swiper__content">
+                          <img src={e.title} alt="" style={{width:"90px"}}/>
+                          <p>{e.description}</p>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  }          
+                </Swiper>
+              </div>
+            </div>
+
+            <div className="helpem__partners">
+                {
+                  partners.map((img,index)=>
+                    <img src={img} alt="" key={index}/>
+                  )
+                }
+            </div>
+        </section>
+      </Container>
   )
 }
 

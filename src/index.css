@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+  --open-sans: "Open Sans", sans-serif;
+  --pl-font-color: #068932;
+  --pd-font-color: #1F1F20;
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  color: var(--pd-font-color);
+  font-family: var(--open-sans);
+}

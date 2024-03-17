@@ -18,5 +18,5 @@ const RouteController = () => {
 };
 
 
-export default RouteController;
 
+export default RouteController;

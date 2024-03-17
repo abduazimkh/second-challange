@@ -1,11 +1,11 @@
 import React from 'react'
-import HelpemAll from '../../components/helpemall/HelpemAll'
+import AnnouncementBar from '../../components/announcement-bar/AnnouncemetBar'
 
 const Home = () => {
   return (
     <div>
-      {/* <HelpemAll/> */}
       Home
+      <AnnouncementBar/>
     </div>
   )
 }

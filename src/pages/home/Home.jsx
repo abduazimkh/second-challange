@@ -1,14 +1,14 @@
 import React from 'react'
-import AnnouncementBar from '../../components/announcement-bar/AnnouncemetBar'
 import HelpemAll from '../../components/helpemall/HelpemAll'
 import PracticeCoding from '../../components/practice-coding/PracticeCoding'
 import Footer from '../../layouts/footer/Footer'
+import Interview from '../../components/interview/Interview'
 
 const Home = () => {
   return (
     <div>
       Home
-      <AnnouncementBar/>
+      <Interview/>
       <HelpemAll/>
       <PracticeCoding/>
       <Footer/>

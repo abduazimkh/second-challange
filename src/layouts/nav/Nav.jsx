@@ -34,7 +34,7 @@ const Nav = () => {
   }, [screenWidth])
 
   useEffect(() => {
-    if(openMenu){
+    if(screenWidth < 1054  && openMenu){
       document.body.style.overflow = 'hidden'
     } else{
       document.body.style.overflow = 'auto '

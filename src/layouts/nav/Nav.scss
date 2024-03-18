@@ -51,11 +51,34 @@
 }
 nav{
     width: 100%;
+}
+.nav-wrapper{
+    width: 100%;
     margin-top:1rem;
     display: flex;
     align-items: center;
     justify-content: space-between !important;
     column-gap: 10px;
+
+}
+.nav-wrapper__fixed{
+    display: flex;
+    margin: 10px auto 0;
+    max-width: 1180px;
+
+}
+.nav__fixed{
+    padding: 1rem 0 !important;
+    display: flex;
+    width: 100%;
+    z-index: 10;
+    top: -15px;
+    left: 0;
+    height: 80px;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 20px red;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .nav-logo{
     flex: 1;

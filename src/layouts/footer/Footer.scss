@@ -1,5 +1,8 @@
 .footer{
     padding: 50px 0;
+    a{
+        transition: 0.3s;
+    }
 }
 
 
@@ -48,6 +51,9 @@
             font-size: 14px;
             color: #576871;
             cursor: pointer;
+            &:hover{
+                color: var(--pl-font-color);
+            }
         }
         list-style: none;
 
@@ -60,11 +66,21 @@
         a{
             font-size: 12px;
             color: #637681;
+            font-weight: 600;
             white-space: nowrap;
+            &:hover{
+                color: #637681;
+                
+            }
         }
         padding-bottom: 12px;
     }
+
+    
+
 }
+
+
 
 
 .copyright{
@@ -85,6 +101,9 @@
             }
             padding: 0;
         }
+        a:hover{
+            opacity: 0.8;
+        }
     }
     
     .copyright-info{
@@ -101,6 +120,9 @@
             font-size: 12px;
             text-decoration: none;
             color: #637681;
+            &:hover{
+                color: var(--pl-font-color);
+            }
         }
     }
 }

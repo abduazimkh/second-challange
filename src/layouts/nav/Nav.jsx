@@ -12,7 +12,6 @@ const Nav = () => {
   const [openMenu, setOpenMenu] = useState(true)
   const [scrollNav, setScrollNav] = useState(0)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  console.log(scrollNav);
 
   useEffect(() => {
     function ListenScrollScreen(){

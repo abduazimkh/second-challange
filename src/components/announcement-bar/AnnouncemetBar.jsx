@@ -33,9 +33,6 @@ const AnnouncementBar = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        // pagination={{
-        //   clickable: true,
-        // }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper bar-swiper"

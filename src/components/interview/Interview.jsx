@@ -16,7 +16,7 @@ import 'aos/dist/aos.css';
 
 const Interview = () => {
     useEffect(() => {
-        Aos.init({ duration: 500 });
+        Aos.init({ duration: 2000 });
       }, [])
   return (
     <section className='interview' id='interview'>
@@ -36,7 +36,7 @@ const Interview = () => {
                     <img src={tool7} alt="img7"/>
                 </div>
                 <div className="interview__banner">
-                    <img src={interviewBanner} alt="" width={"100%"}/>
+                    <img src={interviewBanner} alt=""/>
                 </div>
             </div>
         </Container>

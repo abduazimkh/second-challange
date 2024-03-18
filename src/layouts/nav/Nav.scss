@@ -15,7 +15,6 @@
     column-gap: 35px;
     .navigation-link{
         position: relative;
-
         column-gap: 10px;
         align-items: center;
         color: #b7c9cc;
@@ -95,6 +94,7 @@ nav{
     align-items: center !important;
     column-gap: 30px;
     list-style: none;
+    flex: 1;
     .item-link{
         color: var(--pd-font-color);
         font-size: 15px;
@@ -125,7 +125,8 @@ nav{
             height: 80%;
             top: 3px;
             right: -15px;
-            background-color: #102739;
+            background-color: transparent;
+            // #102739
         }
     }
     .request-btn{

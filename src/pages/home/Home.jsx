@@ -1,17 +1,19 @@
-import React from 'react'
-import AnnouncementBar from '../../components/announcement-bar/AnnouncemetBar'
-import HelpemAll from '../../components/helpemall/HelpemAll'
-import PracticeCoding from '../../components/practice-coding/PracticeCoding'
-import Footer from '../../layouts/footer/Footer'
+import HelpemAll from '../../components/helpemall/HelpemAll';
+import PracticeCoding from '../../components/practice-coding/PracticeCoding';
+import Footer from '../../layouts/footer/Footer';
+import Coding from '../../components/coding/Coding';
 
 const Home = () => {
+
+
+
   return (
     <div>
       Home
-      <AnnouncementBar/>
-      <HelpemAll/>
-      <PracticeCoding/>
-      <Footer/>
+      <Coding />
+      <HelpemAll />
+      <PracticeCoding />
+      <Footer />
     </div>
   )
 }

@@ -1,0 +1,148 @@
+
+// Coding items cards
+
+.coding-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding-top: 100px;
+  border-left: 1px solid #B7C9CC;
+  margin-left: 50px;
+  padding-left: 40px;
+}
+
+.coding__item--content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h2{
+    font-size: 2rem;
+    max-width: 400px;
+    position: relative;
+
+    &::before{
+      content: "";
+      left: -48px;
+      top: 15px;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #B7C9CC;
+      border-radius: 50%;
+      box-shadow: 0 0 1px 6px #f4fdff;
+      background-color: var(--pb-bg-color);
+    }
+    &::after{
+      content: "";
+      left: -25px;
+      top: 22px;
+      position: absolute;
+      width: 10px;
+      border: 1px solid #B7C9CC;
+      background-color: var(--pb-bg-color);
+    }
+
+  }
+  p{
+    max-width: 780px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--sd-font-color);
+    font-weight: 300;
+    opacity: .9;
+  }
+
+  a{
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+    gap: 10px;
+    color: var(--pd-font-color);
+    font-weight: 700;
+    transition: all .3s ease;
+    i{
+      font-size: 1.1rem;
+      svg{
+        height: 14px;
+        width: 20px;
+      }
+    }
+
+    &:hover{
+      gap: 1rem;
+    }
+  }
+}
+
+.coding__item--img{
+  position: relative;
+  img{
+    width: 100%;
+    position: relative;
+    z-index: 999;
+  }
+
+  &:before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    right: 20px;
+    bottom: 50px; 
+    box-shadow: 0 0 200px #cccccc38;
+  }
+}
+
+.coding__item--content:hover{
+  .coding__item--img{  
+    &:before {
+      box-shadow: 0 0 200px #ccc !important; 
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 920px) {
+  .coding-item{
+    flex-direction: column;
+  }
+
+  .coding__item--content{
+    h2{
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .coding-item{
+    flex-direction: column;
+    border: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .coding__item--content{
+    h2{
+      &::after, &::before{
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .coding-item{
+    gap: 30px;
+  }
+
+  .coding__item--content{
+    h2{
+      font-size: 1.7rem;
+    }
+  }
+}

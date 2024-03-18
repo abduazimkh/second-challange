@@ -1,7 +1,7 @@
 import React from 'react'
 import "./PracticeCoding.scss"
 import { Button, Container } from '../../styled-components/StyledComponent'
-import { Link } from "react-router-dom";
+
 
 
 const PracticeCoding = () => {

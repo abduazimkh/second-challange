@@ -1,0 +1,202 @@
+.navbar__top-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 40px;
+    background-color: #102739;
+}
+
+.navigation-content{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 35px;
+    .navigation-link{
+        position: relative;
+
+        column-gap: 10px;
+        align-items: center;
+        color: #b7c9cc;
+        font-size: 15px;
+        text-decoration: none;
+        &:first-child:after{
+            z-index: 3;
+            position: absolute !important;
+            content: '';
+            width: 1px;
+            top: 5px;
+            right: -22%;
+            height:70%;
+            background-color: #c7c2c2;
+        }
+        i{
+            margin-top: 5px;
+            font-size: 14px !important;
+        }
+    }
+}
+
+// NAVBAR STYLES
+
+.overlay__menu-top{
+    z-index: 1;
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    top: 0;
+    transition: .3s;
+    height: 100px;
+}
+nav{
+    width: 100%;
+    margin-top:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    column-gap: 10px;
+}
+.nav-logo{
+    flex: 1;
+    transition: .4s;
+    .logo-image{
+        max-width: 167px;
+        height: 18px;
+        object-fit: contain;
+    }
+}
+.nav-menu{
+    display: flex;
+    align-items: center !important;
+    column-gap: 30px;
+    list-style: none;
+    .item-link{
+        color: var(--pd-font-color);
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none !important;
+        transition: .1s;
+        &:hover{
+            color: var(--pl-font-color);
+        }
+    }
+}
+.nav-actions{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    background-color: #fff;
+    .developers-link{
+        color: var(--pd-font-color);
+        font-weight: 500;
+        position: relative;
+        margin-right: 25px;
+        font-size: 15px;
+        text-decoration: none;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 80%;
+            top: 3px;
+            right: -15px;
+            background-color: #102739;
+        }
+    }
+    .request-btn{
+        font-size: 15px !important;
+        background-color: #eeecec !important;
+        color: var(--pd-font-color) !important;
+    }
+}
+
+
+.hamburger-menu{
+display: none;
+background-color: transparent;
+border: none;
+font-size: 26px;
+margin-left: 22rem !important;
+}
+
+@media only screen and (max-width:1053px){
+    nav{
+        position: relative;
+        margin-top: 3.5rem;
+    }
+    .nav-logo{
+        position: absolute;
+        left: 0;
+    }
+    .hamburger-menu{
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+    .nav-actions, .nav-menu{
+        display: none;
+    }
+    .nav-menu{
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start !important;
+        left: 0;
+        top: calc(100% + 50px);
+        overflow: auto;
+        z-index: 4;
+        width: 100%;
+        row-gap: 27px !important;
+        .item-link{
+            font-size: 17px;
+        }
+    }
+    .nav-actions{
+        border-top: 1px solid #c5c5c5ee;
+        padding-top: 1rem;
+        flex-direction: column !important;
+        row-gap: 20px;
+        width: 100%;
+        height: 240px;
+        position: absolute;
+        top: calc(100% + 300px);    
+        .developers-link{
+            display: none;
+        }
+        .action-link{
+            width: 100%;
+            text-align: center;
+            button{
+                width: 100%;
+                padding: .8rem 0;
+                font-size: 16px !important;
+                font-weight: 550;
+
+            }
+        }
+    }
+  .navigation-content{
+    text-align: center;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    height: 65px !important;
+    position: absolute;
+    top: 62%;
+    z-index: 10;
+    .navigation__contact-link{
+        display: none;
+    }
+    .navigation__login-link{
+        display: flex;
+        margin: auto;
+        justify-content: center !important;
+        color: var(--pd-font-color);
+        font-size: 16px;
+        width: 100%;
+        font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.hero{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    background: #F1F0FF;
+    background: linear-gradient(189deg, rgba(255,255,255,1) 18%, rgba(229,233,238,1) 93%);
+    margin-top: 3rem;
+    padding: 3rem 0;
+}
+.hero-content{
+    width: 100%;
+    max-width: 780px;
+    margin: auto;
+    text-align: center;
+    .hero-title{
+        text-align: center;
+        margin: auto;
+        font-size: 64px;
+        font-weight: 900;
+        max-width: 780px;
+        margin-bottom: 1.5rem;
+    }
+    .hero-description{
+        margin: auto;
+        font-size: 18px;
+        max-width: 620px;
+        font-weight: 300;
+    }
+    .auth-action{
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        column-gap: 15px;
+        align-items: center;
+        margin: 2.5rem auto 0;
+        .signup-btn, .demo-btn{
+            padding: .8rem 2.5rem;
+        }
+        .demo-btn{
+            background-color: transparent;
+            color: var(--pd-font-color);
+            border: 1px solid var(--pd-font-color);
+        }
+    }
+}
+.hero__partners-wrapper{
+    max-width: 780px;
+    margin-top: 3.5rem;
+    .partners-description{
+        font-size: 18px;
+        color: #39424E;
+    }
+    .partners-images{
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        align-items: center;
+        margin-top: 2rem;
+        img{
+            width: 91px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+}
+
+// RESPONSIVE STYLES
+@media only screen and (max-width: 974px){
+    .hero-content{
+        .hero-title{
+            font-size: 32px;
+            font-weight: bold;
+        }
+    }
+    .partners-images{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 478px){
+    .hero-content{
+        .hero-description{
+            font-size: 16px;
+        }
+    }
+    .auth-action{
+        row-gap: 20px;
+        flex-direction: column;
+        .signup-btn, .demo-btn{
+            width: 100%;
+            font-weight: 500 !important;
+        }
+    }
+}

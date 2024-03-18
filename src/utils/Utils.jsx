@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import "./Utils.scss";
 import { useEffect } from "react";
 import Aos from 'aos';
@@ -29,4 +29,23 @@ const CodingCard = ({ title, text, link, linkText, icon, image }) => {
 }
 
 
-export { CodingCard };
+const RegisterForm = () => {
+  return (
+    <>
+      <form className="register__form">
+        <div className="register__route--link">
+          <NavLink end to="/auth/sign-up" className={({ isActive }) => isActive ? "link link--active" : "link"} >Sign up</NavLink>
+          <NavLink end to="/auth" className={({ isActive }) => isActive ? "link link--active" : "link"} >Log in</NavLink>
+        </div>
+
+        <div className="outlet_routes">
+          <Outlet />
+        </div>
+      </form>
+    </>
+  )
+}
+
+
+
+export { CodingCard, RegisterForm };

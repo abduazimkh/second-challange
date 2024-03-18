@@ -4,6 +4,7 @@ import { Container } from '../../styled-components/StyledComponent'
 import { FaArrowRightLong } from "react-icons/fa6";
 import Community from '../../assets/images/community.jpg'
 import { Link } from 'react-router-dom';
+
 const Spotlight = () => {
   return (
     <Container>

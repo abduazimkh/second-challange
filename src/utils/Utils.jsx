@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 const CodingCard = ({ title, text, link, linkText, icon, image }) => {
 
   useEffect(() => {
-    Aos.init({ duration: 500 });
+    Aos.init({ duration: 1000 });
   }, [])
 
 

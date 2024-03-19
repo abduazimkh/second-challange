@@ -9,6 +9,7 @@ import Goldman from '../../assets/images/goldmansachs_black.png'
 import Adobe from '../../assets/images/adobe_black.png'
 import Linkedin from '../../assets/images/linkedin_black.png'
 import { Button, Container } from '../../styled-components/StyledComponent'
+import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     <div className='hero' >
@@ -18,9 +19,11 @@ const Hero = () => {
           <h2 className='hero-title'>  Skills speak louder than words</h2>
           <p className='hero-description'>We help companies develop the strongest tech teams around. We help candidates sharpen their tech skills and pursue job opportunities.</p>
           <div className="auth-action">
+            <Link to={'/auth/sign-up'}>
             <Button className='signup-btn'>Sign up</Button>
+            </Link>
             <Button className='demo-btn'>Request demo</Button>
-          </div>
+          </div> 
           <div className="hero__partners-wrapper">
             <p className="partners-description">Over 40% of developers worldwide and 3,000 companies use HackerRank</p>
             <div className="partners-images">

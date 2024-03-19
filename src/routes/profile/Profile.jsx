@@ -13,7 +13,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Profile = () => {
-  const { pathname } = useLocation()
+  const {pathname} = useLocation()
+  const userData = useSelector(state => state.user.data)
 
   useEffect(() => {
     if (pathname.includes('/profile')) {
@@ -93,6 +94,7 @@ const Profile = () => {
                 <div className="badge-header">
                   <i><HiOutlineShoppingBag /></i>
                   <h4>Work Experience</h4>
+
                 </div>
                 <button className="add-btn">+ Add Work Experience</button>
               </div>

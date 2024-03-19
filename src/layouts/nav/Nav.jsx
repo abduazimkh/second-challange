@@ -65,7 +65,7 @@ const Nav = () => {
         <Container>
           <div style={openMenu ? { display: 'flex' } : { display: 'none' }} className="navigation-content">
             <Link className='navigation-link navigation__contact-link'>Contact us</Link>
-            <Link className='navigation-link navigation__login-link'>Log in {screenWidth < 1054 && openMenu ? <i className='arrow'><FaArrowRight /></i> : ''}</Link>
+            <Link to={'/auth'} className='navigation-link navigation__login-link'>Log in {screenWidth < 1054 && openMenu ? <i className='arrow'><FaArrowRight /></i> : ''}</Link>
           </div>
           {/* Navbar */}
         </Container>

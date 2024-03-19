@@ -7,6 +7,7 @@ import { combineReducers } from "redux";
 
 // reducers slices
 import { AuthReducer } from "../feature/auth-slice";
+import { UserReducer } from "../feature/userdata-slice";
 
 
 const persistConfig = {
@@ -17,7 +18,8 @@ const persistConfig = {
 };  
 
 const reducer = combineReducers({
-  auth: AuthReducer
+  auth: AuthReducer,
+  user: UserReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

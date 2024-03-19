@@ -15,10 +15,12 @@ const authSlice = createSlice({
         authData: (state, action) => {
           console.log(action)
           state.token = action.payload,
-          state.data = action.payload,
           state.auth = true,
           state.loading = false,
           state.error = false
+        },
+        userData: (state, action) => {
+          state.data = action.payload
         },
         authSignOut: (state, _) => {
           state.auth = false,
@@ -30,5 +32,5 @@ const authSlice = createSlice({
     },
 });
 
-export const { authData, authSignOut } = authSlice.actions;
+export const { authData, authSignOut, userData } = authSlice.actions;
 export const AuthReducer = authSlice.reducer;

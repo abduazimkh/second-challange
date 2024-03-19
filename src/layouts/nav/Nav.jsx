@@ -6,12 +6,15 @@ import { IoClose } from "react-icons/io5";
 import Logo from "../../assets/images/hackerrank_logo.png"
 import { FaArrowRight } from "react-icons/fa6";
 import { Button, Container } from '../../styled-components/StyledComponent'
+import { useSelector } from 'react-redux';
 
 
 const Nav = () => {
   const [openMenu, setOpenMenu] = useState(true)
   const [scrollNav, setScrollNav] = useState(0)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+  const store = useSelector(state => state.auth)
 
   useEffect(() => {
     function ListenScrollScreen() {
@@ -90,11 +93,21 @@ const Nav = () => {
               </li>
             </ul>
             <div style={openMenu ? { display: 'flex' } : { display: 'none' }} className="nav-actions">
-              <Link to="/dashboard" className='developers-link'>For developers</Link>
-              <Link to="/auth/sign-up" className='action-link'>
-                <Button>Sign up</Button>
-              </Link>
-
+              {
+                !store.token && !store.data ?
+                  <>
+                    <Link to="/auth/sign-up" className='action-link'>
+                      <Button>Sign up</Button>
+                    </Link>
+                  </>
+                  :
+                  <>
+                    <Link to="/dashboard" className='developers-link'>For developers</Link>
+                    <Link to="/" className='action-link'>
+                      <Button className='request-btn'>Request demo </Button>
+                    </Link>
+                  </>
+              }
             </div>
             <button onClick={() => setOpenMenu(!openMenu)} className='hamburger-menu'>{openMenu ? <IoClose /> : <GiHamburgerMenu />}</button>
           </div>

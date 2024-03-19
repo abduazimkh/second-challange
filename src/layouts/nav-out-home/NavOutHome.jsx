@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import "./NavOutHome.scss"
 import { Button } from '../../styled-components/StyledComponent'
 import logo from "../../assets/images/hackerrank_link-logo.svg"
@@ -11,6 +10,7 @@ import { GoBell } from "react-icons/go";
 import { CgMenuGridO } from "react-icons/cg";
 import { FaUserCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
+import { useSelector } from 'react-redux';
 
 
 
@@ -19,14 +19,14 @@ import { FaChevronDown } from "react-icons/fa";
 
 
 const NavOutHome = () => {
-    const [loggedIn, setLoggedIn] = useState(localStorage.getItem("logged") || false)
+    const state = useSelector(state => state.auth);
 
-  return (
-    <div className='nav-out-home'>
+    return (
+        <div className='nav-out-home'>
             <div className="nav__out-main">
                 <div className="nav__out-links">
-                    <Link className="nav__out-logo">
-                        <img src={logo} alt=""/>
+                    <Link to="/" className="nav__out-logo">
+                        <img src={logo} alt="image" />
                         <h3>HackerRank</h3>
                     </Link>
                     <NavLink className="nav-link" to="/dashboard">Prepare</NavLink>
@@ -36,42 +36,48 @@ const NavOutHome = () => {
                 </div>
                 <div className="nav__out-login">
                     <div className="search-input">
-                        <IoSearch className='search-logo'/>
-                        <input type="text" placeholder='Search'/>
+                        <IoSearch className='search-logo' />
+                        <input type="text" placeholder='Search' />
                     </div>
                     {
-                        !loggedIn ? <div className="before-login">
-                                        <Link to={"/"}>Hiring developers?</Link>
-                                        <Button>Log In</Button>
-                                        <Button>Sign Up</Button>
-                                    </div>
-                                    :
-                                    <div className="after-login-nav-profile">
-                                        <FiMessageSquare/>
-                                        <GoBell/>
-                                        <CgMenuGridO/>
-                                        <div className="user-profile">
-                                            <FaUserCircle/>
-                                            <FaChevronDown/>
-                                        </div>
-                                    </div>
+                        !state.token && !state.data ? <div className="before-login">
+                            <Link to={"/"}>Hiring developers?</Link>
+                            <Link className='btn' to="/auth">
+                                <Button className='btn' >Log In</Button>
+                            </Link>
+                            <Link className='btn' to="/auth/sign-up" >
+                                <Button className='btn' >Sign Up</Button>
+                            </Link>
+                        </div>
+                            :
+                            <div className="after-login-nav-profile">
+                                <FiMessageSquare />
+                                <GoBell />
+                                <CgMenuGridO />
+                                <div className="user-profile">
+                                    <Link to="/profile">
+                                        <FaUserCircle />
+                                    </Link>
+                                    <FaChevronDown />
+                                </div>
+                            </div>
                     }
                 </div>
             </div>
             <div className="appearable__nav">
-                <RxHamburgerMenu className='hamburger'/>
+                <RxHamburgerMenu className='hamburger' />
                 <img src={hakkerRankLogo} alt="" />
                 {
-                    loggedIn ? <div className='appearable__nav-after-logging'>
-                                    <FiMessageSquare/>
-                                    <GoBell/>
-                               </div>
-                               :
-                                <p>just</p>
+                    !state.token && !state.data ? <div className='appearable__nav-after-logging'>
+                        <FiMessageSquare />
+                        <GoBell />
+                    </div>
+                        :
+                        <p>just</p>
                 }
             </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default NavOutHome

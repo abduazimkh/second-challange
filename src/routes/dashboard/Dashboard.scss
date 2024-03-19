@@ -166,6 +166,58 @@
 
 
 
+.logged{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.logged-intro{
+    background: linear-gradient(88.6deg, #11639c 0%, #097bbf 58.85%, #00ace0 100%);
+    padding: 20px 0;
+}
+
+
+.intro-logged{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    h2{
+        font-size: 26px;
+        color: #fff;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 1.5;
+        color: #fff;
+        opacity: .7;
+    }
+    .your-interview{
+        display: flex;
+        align-items: center;
+        p{
+            color: #fff;
+            opacity: 1;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        select{
+            background-color: transparent;
+            border: 1px solid #c9c9cf;
+            max-width: 110px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+
+
+
+
 
 
 

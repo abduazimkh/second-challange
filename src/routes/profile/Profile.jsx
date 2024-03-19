@@ -10,9 +10,12 @@ import { PiGraduationCap } from "react-icons/pi";
 import { FiLink } from "react-icons/fi";
 import { MdEmail, MdOutlineEmail, MdOutlineLocalPhone } from "react-icons/md";
 import { Link, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Profile = () => {
   const {pathname} = useLocation()
+  const userData = useSelector(state => state.user.data)
+  console.log(userData);
 
   useEffect(() => {
     if(pathname.includes('/profile')){
@@ -30,11 +33,11 @@ const Profile = () => {
                 <div className="user__info-wrapper">
                         <div className="user__info-card card">
                             <div className="info__top-header">
-                                <img className='user-avatar' src="" alt="H" />
+                                <img className='user-avatar' src={userData.image} alt="H" />
                                 <button className='edit-btn'><FaEdit/></button>
                             </div>
-                            <h2 className="user__fullname">Mehrojbek Aliyev</h2>
-                            <p className='username-link'>@aliyevmehrojbek1</p>
+                            <h2 className="user__fullname">{userData.name}</h2>
+                            <p className='username-link'>{userData.email}</p>
                         </div>
                         <div className="personal__information-card card">
                             <div className="card-header">
@@ -43,7 +46,7 @@ const Profile = () => {
                             </div>
                             <div className="personal-item">
                                     <i><MdEmail/></i>
-                                    <p>aliyevmehrojbek@gmail.com</p>
+                                    <p>{userData.email}</p>
                             </div>
                             <div className="personal-item">
                                     <i><MdOutlineLocalPhone/></i>

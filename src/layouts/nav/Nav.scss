@@ -19,6 +19,7 @@
         align-items: center;
         color: #b7c9cc;
         font-size: 15px;
+        cursor: pointer;
         text-decoration: none;
         &:first-child:after{
             z-index: 3;
@@ -111,6 +112,12 @@ nav{
     align-items: center;
     column-gap: 10px;
     background-color: #fff;
+    .action-link{
+        button{
+            cursor: pointer !important;
+
+        }
+    }
     .developers-link{
         color: var(--pd-font-color);
         font-weight: 500;
@@ -198,6 +205,7 @@ margin-left: 22rem !important;
         .action-link{
             width: 100%;
             text-align: center;
+            cursor: pointer;
             button{
                 width: 100%;
                 padding: .8rem 0;

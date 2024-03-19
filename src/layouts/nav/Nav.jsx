@@ -96,6 +96,7 @@ const Nav = () => {
               {
                 !store.token && !store.data ?
                   <>
+                    <Link to="/dashboard" className='developers-link'>For developers</Link>
                     <Link to="/auth/sign-up" className='action-link'>
                       <Button>Sign up</Button>
                     </Link>

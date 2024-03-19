@@ -17,14 +17,6 @@ import 'aos/dist/aos.css';
 const Interview = () => {
     useEffect(() => {
         Aos.init({ duration: 1000 });
-
-        document.addEventListener('aos:in', ({ detail }) => {
-            console.log('animated in', detail);
-        });
-
-        document.addEventListener('aos:out', ({ detail }) => {
-            console.log('animated out', detail);
-        });
     }, [])
     return (
         <section className='interview' id='interview'>

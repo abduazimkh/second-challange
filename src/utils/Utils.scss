@@ -108,8 +108,9 @@
 
 // Register Form
 
-.register__form{
-  width: 480px;
+.register__form--wrapper{
+  max-width: 480px;
+  width: 100%;
   border-radius: 3px;
   background-color: #fff;
   box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
@@ -161,6 +162,15 @@
   .coding-item{
     flex-direction: column;
   }
+
+  .register__form--wrapper{
+    max-width: 400px;
+
+    .outlet_routes{
+      padding: 1.5rem;
+    }
+  }
+
 }
 
 @media only screen and (max-width: 700px) {

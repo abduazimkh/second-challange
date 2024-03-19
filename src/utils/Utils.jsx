@@ -32,7 +32,7 @@ const CodingCard = ({ title, text, link, linkText, icon, image }) => {
 const RegisterForm = () => {
   return (
     <>
-      <form className="register__form">
+      <div className="register__form--wrapper">
         <div className="register__route--link">
           <NavLink end to="/auth/sign-up" className={({ isActive }) => isActive ? "link link--active" : "link"} >Sign up</NavLink>
           <NavLink end to="/auth" className={({ isActive }) => isActive ? "link link--active" : "link"} >Log in</NavLink>
@@ -41,7 +41,7 @@ const RegisterForm = () => {
         <div className="outlet_routes">
           <Outlet />
         </div>
-      </form>
+      </div>
     </>
   )
 }

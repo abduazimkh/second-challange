@@ -87,6 +87,12 @@
 
 }
 
+.checkbox-wrapper-42 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 
 .checkbox-wrapper-42 input[type="checkbox"] {
   display: none;
@@ -111,7 +117,8 @@
 .checkbox-wrapper-42 .cbx {
   position: relative;
   top: 1px;
-  width: 17px;
+  min-width: 17px;
+  max-width: 17px;
   height: 17px;
   border: 1px solid #c8ccd4;
   border-radius: 3px;
@@ -244,5 +251,36 @@
   }
   to {
     transform: scale(1, 1);
+  }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .auth__wrapper{
+    padding: 100px 0;
+    gap: 2rem;
+  
+    .top{
+      h1{
+        font-size: 1.5rem;
+      }
+  
+      img{
+        width: 200px;
+        margin-bottom: 1rem;
+      }
+    }
+  
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .register__form--item{
+    button{
+      font-weight: 700;
+      font-size: 1rem;
+      padding: .7rem 1rem;
+    }
   }
 }

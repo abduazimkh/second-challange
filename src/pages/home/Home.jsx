@@ -12,8 +12,6 @@ const Home = () => {
 
   return (
     <div>
-      <AnnouncementBar/>
-      <Nav/>
       <Hero />
       <Spotlight />
       <Coding />

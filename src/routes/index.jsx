@@ -9,7 +9,7 @@ const index = () => {
   return (
     <>
       {
-        !pathname.includes("/auth") && !pathname.includes("/dashboard") && 
+        !pathname.includes("/auth") && !pathname.includes("/dashboard") && !pathname.includes("/profile") &&
         <>
           <AnnouncementBar />
           <Nav />

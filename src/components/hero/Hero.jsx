@@ -24,14 +24,14 @@ const Hero = () => {
           <div className="hero__partners-wrapper">
             <p className="partners-description">Over 40% of developers worldwide and 3,000 companies use HackerRank</p>
             <div className="partners-images">
-        <img src={Peloton} alt="Partners" />
-        <img src={Atlassian} alt="Partners" />
-        <img src={Bloomberg} alt="Partners" />
-        <img src={Vmware} alt="Partners" />
-        <img src={Stripe} alt="Partners" />
-        <img src={Goldman} alt="Partners" />
-        <img src={Adobe} alt="Partners" />
-        <img src={Linkedin} alt="Partners" />
+              <img src={Peloton} alt="Partners" />
+              <img src={Atlassian} alt="Partners" />
+              <img src={Bloomberg} alt="Partners" />
+              <img src={Vmware} alt="Partners" />
+              <img src={Stripe} alt="Partners" />
+              <img src={Goldman} alt="Partners" />
+              <img src={Adobe} alt="Partners" />
+              <img src={Linkedin} alt="Partners" />
             </div>
           </div>
         </div>

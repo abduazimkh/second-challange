@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import Profile from "./profile/Profile";
 
 const Home = lazy(() => import("../pages/home/Home"));
 const Auth = lazy(() => import("./auth"));
@@ -13,6 +14,14 @@ const RouteController = () => {
       element: (
         <Suspense fallback={<p>Loading...</p>}>
           <Home />
+        </Suspense>
+      )
+    },
+    {
+      path: "profile",
+      element: (
+        <Suspense fallback={<p>Loading...</p>}>
+          <Profile />
         </Suspense>
       )
     },
@@ -43,6 +52,7 @@ const RouteController = () => {
         }
       ]
     }
+
   ]);
   return routes;
 };

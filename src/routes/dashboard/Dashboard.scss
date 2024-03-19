@@ -1,0 +1,201 @@
+
+
+.no__login{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.dashboard__itle-no-login{
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(177, 176, 176);
+    p{
+        color: #738f93;
+        font-size: 12px;
+    }
+    h2{
+        color: #0e141e;
+        font-size: 26px;
+        line-height: 1.4;
+    }
+}
+
+
+
+.dashboard__preparation{
+    display: flex;
+    flex-direction: column;
+    h3{
+        font-size: 18px;
+        margin: 40px 0 20px;
+    }
+}
+
+
+.prep-card{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px 20px;
+    .interview__preparation{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        padding: 30px;
+        gap: 20px 0;
+        border: 1px solid #eaeaec;
+        border-radius: 0.5rem;
+        h4{
+            color: #738f93;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            font-weight: normal;
+            line-height: 1.4;            
+        }
+        p:first-of-type{
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #39424e;            
+        }
+        p{
+            font-size: 13px;
+            color: #738f93;
+        }
+        button{
+            font-size: 18px;
+        }
+    }
+    .your__first-skill{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        padding: 30px;
+        gap: 20px 0;
+        border: 1px solid #eaeaec;
+        border-radius: 0.5rem;
+        h4{
+            color: #738f93;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            font-weight: normal;
+            line-height: 1.4;            
+        }
+        p:first-of-type{
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #39424e;            
+        }
+        p{
+            font-size: 13px;
+            color: #738f93;
+        }
+        button{
+            font-size: 18px;
+            color: #3a3a40;
+            background-color: #f4f4f5;
+        }
+    }
+}
+
+
+.dashboard__certification{
+    display: flex;
+    flex-direction: column;
+    h3{
+        font-size: 18px;
+        margin: 40px 0 20px;
+    }
+    .certification__cards{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        div{
+            border: 1px solid #eaeaec;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px 0;
+            width: 100%;
+            padding: 30px;
+            h4{
+                font-size: 26px;
+                color: #0e141e;
+                flex: 1;
+            }
+            button{
+                font-size: 12px;
+                padding: 10px 5px;
+                font-weight: 600;
+                line-height: 100%;
+                cursor: pointer;
+                background-color: #f4f4f5;
+                color: #3a3a40;
+            }
+        }
+        div:last-of-type{
+            background-color: #000;
+            gap: 10px;
+            h4{
+                color: #fff;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 1.4;
+            }
+            p{
+                font-size: 13px;
+                color: #fff;
+            }
+            button{
+                font-size: 15px;
+                padding: 10px 20px;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// Dashboard media started
+
+
+
+@media screen and (max-width: 992px) {
+    .dashboard__certification{
+        .certification__cards{
+            div{
+                h4{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .prep-card{
+        flex-direction: column;
+    }
+
+    .dashboard__certification{
+        .certification__cards{
+            flex-direction: column;
+        }
+    }
+}

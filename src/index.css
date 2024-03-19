@@ -19,3 +19,15 @@ body{
   color: var(--pd-font-color);
   font-family: var(--open-sans);
 }
+
+button{
+  transition: all .3s ease;
+}
+
+button:hover{
+  opacity: .98;
+}
+
+button:active{
+  transform: scale(.97);
+}

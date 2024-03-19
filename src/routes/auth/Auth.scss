@@ -1,0 +1,286 @@
+.auth__wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+
+  .top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h1{
+      font-weight: 700;
+      font-size: 2rem;
+      opacity: .9;
+    }
+
+    img{
+      width: 300px;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+}
+
+.register__form--item{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  button{
+    align-self: flex-end;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    span{
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      color: #c40000;
+      visibility: hidden;
+    }
+    .input-label{
+      display: flex;
+      align-items: center;
+      border: 1px solid #c2c2c2;
+      border-radius: 3px;
+      height: 56px;
+      padding-left: 1rem;
+
+      &:hover{
+        border: 1px solid #333;
+      }
+
+      &:has(> input:focus){
+        border: 1px solid #333;
+      }
+
+      i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+      input{
+        font-size: 1.1rem;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-indent: 10px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+
+}
+
+.checkbox-wrapper-42 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.checkbox-wrapper-42 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-42 label {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--pd-font-color);
+  font-weight: 500;
+
+  a{
+    text-decoration: none;
+    color: rgb(77, 153, 179);
+    
+  }
+
+}
+
+
+.checkbox-wrapper-42 .cbx {
+  position: relative;
+  top: 1px;
+  min-width: 17px;
+  max-width: 17px;
+  height: 17px;
+  border: 1px solid #c8ccd4;
+  border-radius: 3px;
+  vertical-align: middle;
+  transition: background 0.1s ease;
+  cursor: pointer;
+}
+.checkbox-wrapper-42 .cbx:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 5px;
+  height: 11px;
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+  transition-delay: 0.15s;
+}
+.checkbox-wrapper-42 .lbl {
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.checkbox-wrapper-42 input[type="checkbox"]:checked ~ .cbx {
+  border-color: transparent;
+  background: #00ca43;
+  animation: jelly-42 0.6s ease;
+}
+.checkbox-wrapper-42 input[type="checkbox"]:checked ~ .cbx:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+.checkbox-wrapper-42 .cntr {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+@-moz-keyframes jelly-42 {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes jelly-42 {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@-o-keyframes jelly-42 {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@keyframes jelly-42 {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .auth__wrapper{
+    padding: 100px 0;
+    gap: 2rem;
+  
+    .top{
+      h1{
+        font-size: 1.5rem;
+      }
+  
+      img{
+        width: 200px;
+        margin-bottom: 1rem;
+      }
+    }
+  
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .register__form--item{
+    button{
+      font-weight: 700;
+      font-size: 1rem;
+      padding: .7rem 1rem;
+    }
+  }
+}

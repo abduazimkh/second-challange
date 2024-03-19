@@ -7,6 +7,14 @@ export const Container = styled.div`
     padding: 0 20px;
 `
 
+
+export const Container2 = styled.div`
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+`
+
 export const Button = styled.button`
     border: none;
     border-radius: 4px;

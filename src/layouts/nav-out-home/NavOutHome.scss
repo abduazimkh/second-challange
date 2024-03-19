@@ -94,15 +94,15 @@
             white-space: nowrap;
         }
     
-        button{
+        a button{
             white-space: nowrap;
             font-size: 13px;
             font-weight: 600;
         }
     
-        button:first-of-type{
-            background-color: #fff;
-            color: #000;
+        a button:first-of-type{
+            // background-color: #fff;
+            color: #fff;
             font-size: 13px;
             font-weight: 600;
         }

@@ -7,7 +7,7 @@ import { Button } from "../../../styled-components/StyledComponent";
 import { useRef, useState } from "react";
 import instance from "../../../api";
 import { useDispatch } from "react-redux";
-import { authData } from "../../../redux/feature/auth-slice";
+import { userData } from "../../../redux/feature/userdata-slice";
 
 // let is_error = 0
 
@@ -42,7 +42,7 @@ const SignUp = () => {
         avatar: "https://picsum.photos/800",
       }).then(data => {
         if (data.status === 201) {
-          dispatch(authData(data.data))
+          dispatch(userData(data.data))
           window.location.assign("/auth")
         }
       })

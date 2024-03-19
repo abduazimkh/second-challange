@@ -5,15 +5,11 @@ import Interview from '../../components/interview/Interview';
 import HelpemAll from '../../components/helpemall/HelpemAll';
 import PracticeCoding from '../../components/practice-coding/PracticeCoding';
 import Footer from '../../layouts/footer/Footer';
-import AnnouncementBar from "../../components/announcement-bar/AnnouncemetBar";
-import Nav from "../../layouts/nav/Nav";
 
 const Home = () => {
 
   return (
     <div>
-      <AnnouncementBar/>
-      <Nav/>
       <Hero />
       <Spotlight />
       <Coding />

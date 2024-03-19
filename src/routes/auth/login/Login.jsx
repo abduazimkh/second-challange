@@ -32,6 +32,7 @@ const Login = () => {
         password,
       }).then(response => {
         if (response.status === 201) {
+          console.log(response)
           dispatch(authData(response.data.access_token))
           window.location.assign("/")
         }

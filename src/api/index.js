@@ -1,6 +1,6 @@
 import axios from "axios";
-import { store } from "../../redux/store";
-import { authSignOut } from "../../redux/features/auth-slice";
+import { store } from "../redux/store";
+import { authSignOut } from "../redux/feature/auth-slice";
 
 
 const instance = axios.create({

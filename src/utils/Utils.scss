@@ -106,11 +106,71 @@
 }
 
 
+// Register Form
+
+.register__form--wrapper{
+  max-width: 480px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+
+  .outlet_routes{
+    padding: 2rem;
+    position: relative;
+    background-color: #fff;
+  }
+}
+
+.register__route--link{
+  height: 60px;
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  .link{
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    box-shadow: inset 5px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--pd-font-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    &--active{
+      background-color: #fff;
+      box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+    }
+  }
+
+}
+
+.checkbox__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #2a81d8;
+  }
+}
+
 
 @media only screen and (max-width: 920px) {
   .coding-item{
     flex-direction: column;
   }
+
+  .register__form--wrapper{
+    max-width: 400px;
+
+    .outlet_routes{
+      padding: 1.5rem;
+    }
+  }
+
 }
 
 @media only screen and (max-width: 700px) {

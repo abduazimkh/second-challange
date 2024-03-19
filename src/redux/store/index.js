@@ -6,6 +6,7 @@ import { combineReducers } from "redux";
 
 
 // reducers slices
+import { AuthReducer } from "../feature/auth-slice";
 
 
 const persistConfig = {
@@ -16,7 +17,7 @@ const persistConfig = {
 };  
 
 const reducer = combineReducers({
-  auth: () => null
+  auth: AuthReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

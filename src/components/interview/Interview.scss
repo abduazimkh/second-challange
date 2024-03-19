@@ -36,6 +36,12 @@
             aspect-ratio: 1/1;
         }
     }
+    .interview__banner{
+        padding: 0 48px;
+        img{
+            width: 100%;
+        }
+    }
 }
 
 
@@ -43,6 +49,12 @@
     .interview__main{
         h3{
             font-size: 24px;
+        }
+        .interview__banner{
+            padding: 0;
+            img{
+                width: 100%;
+            }
         }
     }
 }
@@ -58,6 +70,7 @@
                 aspect-ratio: 1/1;
             }
         }
+        
     }
 }
 

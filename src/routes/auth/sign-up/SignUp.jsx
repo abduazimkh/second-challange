@@ -99,8 +99,8 @@ const SignUp = () => {
 
         <div className="checkbox-wrapper-42">
           <input id="cbx-42" type="checkbox" />
-          <label className="cbx" for="cbx-42"></label>
-          <label className="lbl" for="cbx-42">I agree to HackerRank's <Link to="/" >Terms of Service</Link> and <Link to="/" >Privacy Policy.</Link></label>
+          <label className="cbx" htmlFor="cbx-42"></label>
+          <label className="lbl" htmlFor="cbx-42">I agree to HackerRank's <Link to="/" >Terms of Service</Link> and <Link to="/" >Privacy Policy.</Link></label>
         </div>
 
         <Button>Create an Account</Button>

@@ -83,10 +83,10 @@ const Login = () => {
         </div>
 
         <div className="checkbox__wrapper">
-          <div class="checkbox-wrapper-42">
+          <div className="checkbox-wrapper-42">
             <input id="cbx-42" type="checkbox" />
-            <label className="cbx" for="cbx-42"></label>
-            <label className="lbl" for="cbx-42">Remember me</label>
+            <label className="cbx" htmlFor="cbx-42"></label>
+            <label className="lbl" htmlFor="cbx-42">Remember me</label>
           </div>
 
           <Link to="/auth/sign-up">Forgot Password</Link>
